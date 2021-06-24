@@ -22,8 +22,9 @@ def start(message):
     item3 = types.KeyboardButton('Smartphone')
     item4 = types.KeyboardButton('Tablet')
     item5 = types.KeyboardButton('Search By CVE Number Directly')
-
-    markup.add(item1, item2, item3, item4, item5)
+    item6 = types.KeyboardButton('Search by Vendor Name')
+    
+    markup.add(item1, item2, item3, item4, item5, item6)
 
     MESSAGE_STATE = STATE_CONSTS["start"]
     bot.send_message(message.chat.id, 'Hi, {0.first_name}! Please select a use case!'.format(message.from_user), reply_markup=markup)
